@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PGUTI first drupal them</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="./img/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-links">
+                    <a href="#" class="top-bar-link">Student Login</a>
+                    <a href="#" class="top-bar-link">Alumni</a>
+                    <a href="#" class="top-bar-link">Log in</a>
+                </div>
+                <div class="language-selector">
+                    <button class="language-btn">
+                        <span>English</span>
+                        <i class="fas fa-chevron-up"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo-link">
+                    <img src="https://www.psuti.ru/sites/default/files/pguti70-mini-chb-belyy-sayt.png"
+                        alt="Windy City Community College" class="logo-img">
+                </a>
+                <nav>
+                    <button class="mobile-menu-toggle" aria-label="Меню">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <ul class="nav-menu">
+                        <li><a href="#admission">Абитуриентам</a></li>
+                        <li><a href="#academics">Студентам</a></li>
+                        <li><a href="#student-life">Студеньческая жизнь</a></li>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#contact">Связаться с нами</a></li>
+                    </ul>
+                </nav>
+                <div class="header-search">
+                    <div class="search-box">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" placeholder="Поиск" class="search-input">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Создаём будущее, шаг за шагом.</h1>
+            <p>Ознакомьтесь с программами, разработанными для того, чтобы помочь вам добиться успеха в учебе, карьере и
+                за ее пределами.</p>
+            <a href="https://abitur.psuti.ru/" class="btn">Подать заявку сейчас</a>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="why-choose">
+        <div class="container">
+            <div class="why-choose-content">
+                <div class="why-choose-text">
+                    <h2>Почему стоит выбрать ПГУТИ?</h2>
+                    <p>В Поволжском государственном университете телекоммуникаций и информатики мы — больше, чем просто
+                        образовательное учреждение, мы — сообщество единомышленников, объединённых стремлением к
+                        инновациям и профессиональному совершенству. Независительно от того, получаете ли вы высшее
+                        образование, повышаете квалификацию или развиваете научные компетенции, вы найдёте здесь
+                        передовые технологии, экспертную поддержку и уникальные возможности для реализации вашего
+                        потенциала.</p>
+                    <p>Наши образовательные программы в области телекоммуникаций, информационных технологий, электроники
+                        и кибербезопасности разработаны с учётом современных требований цифровой экономики: гибкие формы
+                        обучения, практико-ориентированный подход, сотрудничество с ведущими IT-компаниями и операторами
+                        связи, а также персональное сопровождение на каждом этапе обучения. Присоединяйтесь к
+                        динамичному университетскому сообществу, где студенты со всей России и зарубежных стран
+                        объединяются для решения актуальных задач отрасли, построения профессиональных связей и создания
+                        технологий будущего.</p>
+                    <p>Откройте для себя возможности ПГУТИ — одного из ведущих технических вузов Поволжья. Ваш путь в
+                        мир телекоммуникаций и информационных технологий начинается здесь!</p>
+
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span>БЮДЖЕТНЫЕ МЕСТА И СТИПЕНДИИ</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>РАЗЛИЧНЫЕ ФОРМЫ ОБУЧЕНИЯ (ВКЛЮЧАЯ ДИСТАНЦИОННОЕ)</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-hands-helping"></i>
+                            <span>ПАРТНЁРСТВО С ВЕДУЩИМИ IT-КОМПАНИЯМИ</span>
+                        </div>
+                    </div>
+
+                    <a href="https://abitur.psuti.ru/" class="btn">Узнать больше</a>
+                </div>
+                <div class="why-choose-image">
+                    <img src="./img/college_1.png.avif" alt="Students in classroom at Windy City Community College">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs" id="programs">
+        <div class="container">
+            <h2>Выберите направление, соответствующее вашим целям.</h2>
+
+            <div class="program-grid">
+                <a href="https://www.psuti.ru/ru/profile/business" class="program-card program-card-1">
+                    <div class="program-card-overlay"></div>
+                    <div class="program-card-content">
+                        <h3>Бизнес-информатика</h3>
+                        <i class="fas fa-arrow-right arrow-icon"></i>
+                    </div>
+                </a>
+                <a href="https://www.psuti.ru/ru/profile/communication" class="program-card program-card-2">
+                    <div class="program-card-overlay"></div>
+                    <div class="program-card-content">
+                        <h3>Системы связи</h3>
+                        <i class="fas fa-arrow-right arrow-icon"></i>
+                    </div>
+                </a>
+                <a href="https://www.psuti.ru/ru/profile/radio%D0%b5ngineering" class="program-card program-card-3">
+                    <div class="program-card-overlay"></div>
+                    <div class="program-card-content">
+                        <h3>Радиотехника</h3>
+                        <i class="fas fa-arrow-right arrow-icon"></i>
+                    </div>
+                </a>
+                <a href="/ru/profile/photonics" class="program-card program-card-4">
+                    <div class="program-card-overlay"></div>
+                    <div class="program-card-content">
+                        <h3>Фотоника</h3>
+                        <i class="fas fa-arrow-right arrow-icon"></i>
+                    </div>
+                </a>
+                <a href="https://www.psuti.ru/ru/profile/programm" class="program-card program-card-5">
+                    <div class="program-card-overlay"></div>
+                    <div class="program-card-content">
+                        <h3>Программное обеспечение</h3>
+                        <i class="fas fa-arrow-right arrow-icon"></i>
+                    </div>
+                </a>
+                <a href="https://www.psuti.ru/ru/profile/information_systems" class="program-card program-card-6">
+                    <div class="program-card-overlay"></div>
+                    <div class="program-card-content">
+                        <h3>Информационные системы</h3>
+                        <i class="fas fa-arrow-right arrow-icon"></i>
+                    </div>
+                </a>
+                <a href="https://www.psuti.ru/ru/profile/humanitar" class="program-card program-card-7 hidden-card">
+                    <div class="program-card-overlay"></div>
+                    <div class="program-card-content">
+                        <h3>Гуманитарные направления</h3>
+                        <i class="fas fa-arrow-right arrow-icon"></i>
+                    </div>
+                </a>
+                <a href="https://www.psuti.ru/ru/profile/secun" class="program-card program-card-8 hidden-card">
+                    <div class="program-card-overlay"></div>
+                    <div class="program-card-content">
+                        <h3>Информационная безопасность</h3>
+                        <i class="fas fa-arrow-right arrow-icon"></i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="text-center">
+                <button id="showAllPrograms" class="btn">ВСЕ ПРОГРАММЫ</button>
+            </div>
+        </div>
+    </section>
+    <!-- faculties Section -->
+    <section class="faculties" id="faculties">
+        <div class="container">
+            <h2>Факультеты ПГУТИ</h2>
+
+            <div class="faculties-grid">
+                <a href="https://www.psuti.ru/ru/f1" class="faculty-card">
+                    <div class="faculty-card-overlay"></div>
+                    <div class="faculty-card-image">
+                        <img src="./img/fk1.jpg" alt="Факультет кибербезопасности и управления">
+                    </div>
+                    <div class="faculty-card-content">
+                        <h3>ФАКУЛЬТЕТ №1</h3>
+                        <p>Факультет кибербезопасности и управления</p>
+                    </div>
+                </a>
+                <a href="https://www.psuti.ru/ru/faculty/information-systems" class="faculty-card">
+                    <div class="faculty-card-overlay"></div>
+                    <div class="faculty-card-image">
+                        <img src="./img/fk2.jpg" alt="Факультет информационных систем и технологий">
+                    </div>
+                    <div class="faculty-card-content">
+                        <h3>ФАКУЛЬТЕТ №2</h3>
+                        <p>Факультет информационных систем и технологий</p>
+                    </div>
+                </a>
+                <a href="https://www.psuti.ru/ru/faculty/digital-economy" class="faculty-card">
+                    <div class="faculty-card-overlay"></div>
+                    <div class="faculty-card-image">
+                        <img src="./img/fk3.jpg" alt="Факультет цифровой экономики и массовых коммуникаций">
+                    </div>
+                    <div class="faculty-card-content">
+                        <h3>ФАКУЛЬТЕТ №3</h3>
+                        <p>Факультет цифровой экономики и массовых коммуникаций</p>
+                    </div>
+                </a>
+                <a href="https://www.psuti.ru/ru/faculty/optical-quantum" class="faculty-card">
+                    <div class="faculty-card-overlay"></div>
+                    <div class="faculty-card-image">
+                        <img src="./img/fk4.jpg" alt="Факультет оптических и квантовых коммуникаций">
+                    </div>
+                    <div class="faculty-card-content">
+                        <h3>ФАКУЛЬТЕТ №4</h3>
+                        <p>Факультет оптических и квантовых коммуникаций</p>
+                    </div>
+                </a>
+                <a href="https://www.psuti.ru/ru/faculty/radio-communication" class="faculty-card">
+                    <div class="faculty-card-overlay"></div>
+                    <div class="faculty-card-image">
+                        <img src="./img/fk5.jpg" alt="Факультет систем радиосвязи и радиотехники">
+                    </div>
+                    <div class="faculty-card-content">
+                        <h3>ФАКУЛЬТЕТ №5</h3>
+                        <p>Факультет систем радиосвязи и радиотехники</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Journey Section -->
+    <section class="journey">
+        <div class="container">
+            <div class="journey-content">
+                <div class="journey-image">
+                    <img src="./img/college_1.png.avif" alt="Students at Windy City Community College">
+                </div>
+                <div class="journey-text">
+                    <h2>Ваше путешествие начинается здесь.</h2>
+                    <p>В ПГУТИ мы стремимся помочь вам осуществить ваши мечты. Более 15 направлений подготовки в сфере
+                        IT, телекоммуникаций, информационной безопасности и управления, гибкий учебный процесс и
+                        поддерживающее академическое сообщество предоставляют вам инструменты и возможности, необходимые
+                        для успешной карьеры. Начинаете ли вы свой академический путь, хотите продвинуться по карьерной
+                        лестнице или освоить новые технологии, ПГУТИ — идеальное место для старта. Присоединяйтесь к нам
+                        и сделайте первый шаг к светлому будущему!</p>
+
+                    <div class="journey-links">
+                        <a href="https://abitur.psuti.ru/" class="journey-link">КАК ПОДАТЬ ЗАЯВЛЕНИЕ</a>
+                        <a href="https://www.psuti.ru/ru/students/stipen/gosudarstvennaya-akademicheskaya-stipendiya-dlya-1-kursa"
+                            class="journey-link">СТИПЕНДИИ И ФИНАНСОВАЯ ПОДДЕРЖКА</a>
+                        <a href="https://www.psuti.ru/ru/news/v-pguti-sostoyalsya-tradicionnyy-den-otkrytyh-dverey"
+                            class="journey-link">ДНИ ОТКРЫТЫХ ДВЕРЕЙ</a>
+                    </div>
+
+                    <a href="https://abitur.psuti.ru/" class="btn">Начать</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events">
+        <div class="container">
+            <div class="events-wrapper">
+                <div class="news-section">
+                    <div class="news-card">
+                        <img src="./img/news-1.jpg" alt="Доцент ПГУТИ на фестивале" class="news-image">
+                        <div class="news-date">08/06/26 - 16:07</div>
+                        <h3><a
+                                href="https://www.psuti.ru/ru/news/docent-pguti-vystupila-na-pervom-vserossiyskom-festivale-vstrecha-kultur">Доцент
+                                ПГУТИ выступила на Первом Всероссийском фестивале «Встреча культур»</a>
+                        </h3>
+                    </div>
+                    <div class="news-card">
+                        <img src="./img/news-2.jpg" alt="Ректор ПГУТИ поздравил" class="news-image">
+                        <div class="news-date">04/06/26 - 16:22</div>
+                        <h3><a
+                                href="https://www.psuti.ru/ru/news/rektor-pguti-lichno-pozdravil-nikolaya-panteleevicha-fomenko-so-100-letnim-yubileem">Ректор
+                                ПГУТИ лично поздравил Николая Пантелеевича Фоменко со 100-летним
+                                юбилеем</a></h3>
+                    </div>
+                    <div class="news-card">
+                        <img src="./img/news-3.jpg" alt="Студенты ПГУТИ — призёры чемпионата" class="news-image">
+                        <div class="news-date">02/06/26 - 17:16</div>
+                        <h3><a
+                                href="https://www.psuti.ru/ru/news/studenty-pguti-prizyory-chempionata-kubok-polzovateley-2026">Студенты
+                                ПГУТИ — призёры чемпионата «Кубок пользователей 2026»</a></h3>
+                    </div>
+                    <div class="news-card">
+                        <img src="./img/news-4.jpg" alt="АйТигры на КВН" class="news-image">
+                        <div class="news-date">02/06/26 - 17:15</div>
+                        <h3><a href="https://www.psuti.ru/ru/news/aytigry-predstavili-pguti-na-pervoy-lige-kvn">«АйТигры»
+                                представили ПГУТИ на Первой лиге КВН!</a></h3>
+                    </div>
+                    <div class="news-card">
+                        <img src="./img/news-5.jpg" alt="Студентка ПГУТИ — призёр конкурса" class="news-image">
+                        <div class="news-date">02/06/26 - 12:20</div>
+                        <h3><a
+                                href="https://www.psuti.ru/ru/news/studentka-pguti-prizyor-vi-vserossiyskogo-konkursa-nauchnyh-perevodov">Студентка
+                                ПГУТИ — призёр VI Всероссийского конкурса научных переводов</a></h3>
+                    </div>
+                    <div class="news-card">
+                        <img src="./img/news-6.jpg" alt="ПГУТИ на Фестивале прессы" class="news-image">
+                        <div class="news-date">02/06/26 - 09:55</div>
+                        <h3><a href="https://www.psuti.ru/ru/news/pguti-na-festivale-pressy-2026">ПГУТИ на Фестивале
+                                прессы — 2026!</a></h3>
+                    </div>
+                </div>
+
+                <div class="events-list">
+                    <!-- ПРЕДСТОЯЩИЕ СОБЫТИЯ (теперь с карточками дат) -->
+                    <div class="upcoming-section">
+                        <h2>Предстоящие события</h2>
+                        <div class="upcoming-event-list">
+                            <div class="event-item">
+                                <div class="event-date-box">
+                                    <div class="month">Июня</div>
+                                    <div class="day">20</div>
+                                </div>
+                                <div class="event-details">
+                                    <h3><a href="#">Встреча выпускников КЭИС-ПИИРС-ПГАТИ-ПГУТИ</a></h3>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-date-box">
+                                    <div class="month">Июня</div>
+                                    <div class="day">30</div>
+                                </div>
+                                <div class="event-details">
+                                    <h3><a href="#">Вручение дипломов 2026</a></h3>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-date-box">
+                                    <div class="month">Августа</div>
+                                    <div class="day">22</div>
+                                </div>
+                                <div class="event-details">
+                                    <h3><a href="#">V открытый чемпионат ПГУТИ по дрон-рейсингу</a></h3>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-date-box">
+                                    <div class="month">Сентября</div>
+                                    <div class="day">24</div>
+                                </div>
+                                <div class="event-details">
+                                    <h3><a href="#">Официальное празднование 70-летия КЭИС-ПИИРС-ПГАТИ-ПГУТИ</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ПРОШЕДШИЕ СОБЫТИЯ (теперь в виде списка) -->
+                    <div class="past-section">
+                        <h2>Прошедшие события</h2>
+                        <div class="past-event-list">
+                            <div class="past-event-item">
+                                <span class="past-event-date">09 июня 2026</span>
+                                <h3><a href="#">6 июня - День русского языка</a></h3>
+                            </div>
+                            <div class="past-event-item">
+                                <span class="past-event-date">09 июня 2026</span>
+                                <h3><a href="#">Очень странные дела</a></h3>
+                            </div>
+                            <div class="past-event-item">
+                                <span class="past-event-date">09 июня 2026</span>
+                                <h3><a href="#">Аренда аккаунтов</a></h3>
+                            </div>
+                            <div class="past-event-item">
+                                <span class="past-event-date">08 июня 2026</span>
+                                <h3><a href="#">Межконфессиональная Самара</a></h3>
+                            </div>
+                            <div class="past-event-item">
+                                <span class="past-event-date">08 июня 2026</span>
+                                <h3><a href="#">Доцент ПГУТИ выступила на Первом Всероссийском фестивале «Встреча
+                                        культур»</a></h3>
+                            </div>
+                            <div class="past-event-item">
+                                <span class="past-event-date">04 июня 2026</span>
+                                <h3><a href="#">Ректор ПГУТИ лично поздравил Николая Пантелеевича Фоменко со 100-летним
+                                        юбилеем</a></h3>
+                            </div>
+                            <div class="past-event-item">
+                                <span class="past-event-date">02 июня 2026</span>
+                                <h3><a href="#">Студенты ПГУТИ — призёры чемпионата «Кубок пользователей 2026»</a></h3>
+                            </div>
+                            <div class="past-event-item">
+                                <span class="past-event-date">02 июня 2026</span>
+                                <h3><a href="#">«АйТигры» представили ПГУТИ на Первой лиге КВН!</a></h3>
+                            </div>
+                            <div class="past-event-item">
+                                <span class="past-event-date">02 июня 2026</span>
+                                <h3><a href="#">Студентка ПГУТИ — призёр VI Всероссийского конкурса научных
+                                        переводов</a></h3>
+                            </div>
+                            <div class="past-event-item">
+                                <span class="past-event-date">02 июня 2026</span>
+                                <h3><a href="#">Фехтовальщики ПГУТИ — в чемпионате ПФО</a></h3>
+                            </div>
+                            <div class="past-event-item">
+                                <span class="past-event-date">02 июня 2026</span>
+                                <h3><a href="#">Золото Универсиады — у ПГУТИ</a></h3>
+                            </div>
+                            <div class="past-event-item hidden-event">
+                                <span class="past-event-date">01 июня 2026</span>
+                                <h3><a href="#">Единый контакт-центр Минобрнауки</a></h3>
+                            </div>
+                            <div class="past-event-item hidden-event">
+                                <span class="past-event-date">28 мая 2026</span>
+                                <h3><a href="#">Вниманию студентов-дипломников</a></h3>
+                            </div>
+                            <div class="past-event-item hidden-event">
+                                <span class="past-event-date">28 мая 2026</span>
+                                <h3><a href="#">Спортсмен ПГУТИ завоевал серебро</a></h3>
+                            </div>
+                            <div class="past-event-item hidden-event">
+                                <span class="past-event-date">28 мая 2026</span>
+                                <h3><a href="#">«Ростелеком» открыл учебный центр в ПГУТИ</a></h3>
+                            </div>
+                            <div class="past-event-item hidden-event">
+                                <span class="past-event-date">27 мая 2026</span>
+                                <h3><a href="#">В ПГУТИ состоялся интерактив</a></h3>
+                            </div>
+                            <div class="past-event-item hidden-event">
+                                <span class="past-event-date">27 мая 2026</span>
+                                <h3><a href="#">Преподавателям ПГУТИ торжественно вручили награды</a></h3>
+                            </div>
+                            <div class="past-event-item hidden-event">
+                                <span class="past-event-date">27 мая 2026</span>
+                                <h3><a href="#">ПГУТИ на Самарской «Студвесне»</a></h3>
+                            </div>
+                            <div class="past-event-item hidden-event">
+                                <span class="past-event-date">26 мая 2026</span>
+                                <h3><a href="#">27 мая - Всероссийский день библиотек</a></h3>
+                            </div>
+                            <div class="past-event-item hidden-event">
+                                <span class="past-event-date">26 мая 2026</span>
+                                <h3><a href="#">Студенты ПГУТИ — призёры конкурса</a></h3>
+                            </div>
+                            <div class="past-event-item hidden-event">
+                                <span class="past-event-date">26 мая 2026</span>
+                                <h3><a href="#">Спортсмен ПГУТИ завоевал золото</a></h3>
+                            </div>
+                            <div class="past-event-item hidden-event">
+                                <span class="past-event-date">26 мая 2026</span>
+                                <h3><a href="#">Студенты ПГУТИ — победители олимпиады</a></h3>
+                            </div>
+                            <div class="past-event-item hidden-event">
+                                <span class="past-event-date">26 мая 2026</span>
+                                <h3><a href="#">В ПГУТИ завершились мероприятия</a></h3>
+                            </div>
+                            <div class="past-event-item hidden-event">
+                                <span class="past-event-date">24 мая 2026</span>
+                                <h3><a href="#">День славянской письменности и культуры</a></h3>
+                            </div>
+                        </div>
+                        <div class="text-center" style="margin-top: 30px;">
+                            <button id="showMoreEvents" class="btn">ПОКАЗАТЬ ЕЩЁ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="support">
+        <div class="container">
+            <div class="support-header">
+                <span class="support-line"></span>
+                <h2>Support Every Step of the Way</h2>
+                <span class="support-line"></span>
+            </div>
+
+            <div class="support-grid">
+                <div class="support-card">
+                    <i class="fas fa-landmark"></i>
+                    <h3>TUTORING CENTER</h3>
+                </div>
+                <div class="support-card">
+                    <i class="fas fa-comments"></i>
+                    <h3>CAREER COUNSELING</h3>
+                </div>
+                <div class="support-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>IT HELP DESK</h3>
+                </div>
+                <div class="support-card">
+                    <i class="fas fa-book"></i>
+                    <h3>LIBRARY SERVICES</h3>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="#" class="btn">EXPLORE RESOURCES</a>
+            </div>
+        </div>
+    </section>
+    <!-- Get Involved Section -->
+    <section class="get-involved">
+        <div class="container">
+            <h2>Get Involve on Campus</h2>
+            <div class="involved-grid">
+                <div class="involved-card">
+                    <div class="involved-image">
+                        <img src="./img/getinvolved_1_1_0.jpeg" alt="Clubs & Organizations">
+                    </div>
+                    <div class="involved-content">
+                        <a href="#" class="involved-btn">CLUBS & ORGANIZATIONS</a>
+                    </div>
+                </div>
+                <div class="involved-card">
+                    <div class="involved-image">
+                        <img src="./img/getinvolved_2_1_0.jpeg" alt="Sports & Fitness">
+                    </div>
+                    <div class="involved-content">
+                        <a href="#" class="involved-btn">SPORTS & FITNESS</a>
+                    </div>
+                </div>
+                <div class="involved-card">
+                    <div class="involved-image">
+                        <img src="./img/getinvolved_3_1_0.jpeg" alt="Volunteer">
+                    </div>
+                    <div class="involved-content">
+                        <a href="#" class="involved-btn">VOLUNTEER</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="Windy City Community College">
+                    </div>
+                    <p>You are viewing a demo site of Provus EDU. All content on this site is for demonstration purposes
+                        only.</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h3>Navigation</h3>
+                        <ul>
+                            <li><a href="#">Apply</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Academics</a></li>
+                            <li><a href="#">Programs</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#">Apply</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Academics</a></li>
+                            <li><a href="#">Programs</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Contact Information</h3>
+                        <ul>
+                            <li><a href="tel:+17735258255">+1 (773)-525-8255</a></li>
+                            <li><a href="mailto:ignite@prometsource.com">ignite@prometsource.com</a></li>
+                            <li>4809 N. Ravenswood Ave.<br>Suite 126, Chicago, IL 60640</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-links">
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy policy</a>
+                    <a href="#">Security</a>
+                    <a href="#">Sitemap</a>
+                </div>
+                <p>&copy; 2026 All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
