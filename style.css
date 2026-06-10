@@ -859,7 +859,9 @@ nav {
     }
 }
 
-/* Events Section */
+/* ========================================
+   EVENTS SECTION
+   ======================================== */
 .events {
     padding: 80px 0;
     background: #f8f9fa;
@@ -872,7 +874,9 @@ nav {
     align-items: start;
 }
 
-/* News Section */
+/* ========================================
+   NEWS SECTION (Left Column)
+   ======================================== */
 .news-section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -888,6 +892,7 @@ nav {
 
 .news-image {
     width: 100%;
+    height: 200px;
     object-fit: cover;
     border-radius: 4px 40px 4px 40px;
     margin-bottom: 15px;
@@ -916,7 +921,8 @@ nav {
     line-height: 1.5;
     margin: 0;
 }
-/* News card links */
+
+/* News links */
 .news-card h3 a {
     color: var(--color-text);
     text-decoration: none;
@@ -930,23 +936,14 @@ nav {
     color: var(--color-primary);
 }
 
-/* Event details links */
-.event-details h3 a {
-    color: var(--color-text);
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 1.3;
-    transition: color 0.3s;
+/* ========================================
+   EVENTS LIST (Right Column)
+   ======================================== */
+.events-list {
+    padding-left: 40px;
 }
 
-.event-details h3 a:hover {
-    color: var(--color-primary);
-}
-
-/* Events List */
-/* Upcoming Events List */
-/* Общие стили заголовков */
+/* Common heading styles */
 .upcoming-section h2,
 .past-section h2 {
     text-align: left;
@@ -956,7 +953,7 @@ nav {
     font-weight: 700;
 }
 
-/* ===== ПРЕДСТОЯЩИЕ СОБЫТИЯ (Стиль с карточками дат) ===== */
+/* ----- UPCOMING EVENTS (Date box style) ----- */
 .upcoming-event-list .event-item {
     display: flex;
     gap: 25px;
@@ -1005,7 +1002,7 @@ nav {
     color: var(--color-primary);
 }
 
-/* ===== ПРОШЕДШИЕ СОБЫТИЯ (Стиль списка с пунктиром) ===== */
+/* ----- PAST EVENTS (List style with dotted separator) ----- */
 .past-event-list .past-event-item {
     display: flex;
     align-items: center;
@@ -1042,39 +1039,13 @@ nav {
     text-decoration: underline;
 }
 
-/* ===== АДАПТИВНОСТЬ ===== */
-@media (max-width: 640px) {
-    /* Предстоящие */
-    .upcoming-event-list .event-item {
-        flex-direction: column;
-        gap: 15px;
-    }
-    .upcoming-event-list .event-date-box {
-        min-width: auto;
-        width: 100%;
-    }
-    
-    /* Прошедшие */
-    .past-event-list .past-event-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-    .past-event-list .past-event-date {
-        min-width: auto;
-    }
-    
-    .upcoming-section h2,
-    .past-section h2 {
-        font-size: 28px;
-    }
-}
-/* Скрытые события */
+/* ========================================
+   HIDDEN ELEMENTS & BUTTON
+   ======================================== */
 .hidden-event {
     display: none;
 }
 
-/* Кнопка */
 #showMoreEvents {
     padding: 15px 40px;
     background: var(--color-accent);
@@ -1094,7 +1065,108 @@ nav {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+
+/* ========================================
+   RESPONSIVE STYLES
+   ======================================== */
+
+/* Tablet (max-width: 968px) */
+@media (max-width: 968px) {
+    .events-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .news-section {
+        grid-template-columns: 1fr;
+        padding-right: 0;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 40px;
+    }
+    
+    .events-list {
+        padding-left: 0;
+    }
+    
+    .upcoming-section h2,
+    .past-section h2 {
+        text-align: center;
+    }
+}
+
+/* Mobile (max-width: 640px) */
+@media (max-width: 640px) {
+    /* News */
+    .news-section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .news-image {
+        height: 250px;
+    }
+    
+    .news-card h3,
+    .news-card h3 a {
+        font-size: 16px;
+    }
+    
+    /* Upcoming Events - HORIZONTAL layout on mobile */
+    .upcoming-event-list .event-item {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: flex-start;
+        margin-bottom: 25px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .upcoming-event-list .event-item:last-child {
+        border-bottom: none;
+    }
+    
+    .upcoming-event-list .event-date-box {
+        min-width: 100px;
+        width: auto;
+        padding: 15px 15px;
+    }
+    
+    .upcoming-event-list .event-date-box .month {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+    
+    .upcoming-event-list .event-date-box .day {
+        font-size: 36px;
+    }
+    
+    .upcoming-event-list .event-details {
+        flex: 1;
+    }
+    
+    .upcoming-event-list .event-details h3 {
+        font-size: 16px;
+        line-height: 1.4;
+        margin-bottom: 8px;
+    }
+    
+    /* Past Events - HIDDEN on mobile */
+    .past-section {
+        display: none;
+    }
+    
+    /* Headings */
+    .upcoming-section h2,
+    .past-section h2 {
+        font-size: 24px;
+    }
+}
 /* Support Section */
+/* ========================================
+   SUPPORT SECTION
+   ======================================== */
 .support {
     padding: 80px 0;
     background: var(--color-white);
@@ -1123,6 +1195,7 @@ nav {
     white-space: nowrap;
 }
 
+/* Grid Layout */
 .support-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1130,6 +1203,7 @@ nav {
     margin-bottom: 40px;
 }
 
+/* Support Card as Link */
 .support-card {
     background: var(--color-white);
     padding: 40px 25px;
@@ -1138,12 +1212,16 @@ nav {
     border: 1px solid #e0e0e0;
     transition: all 0.3s;
     cursor: pointer;
+    text-decoration: none;
+    display: block;
+    color: inherit;
 }
 
 .support-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     border-color: var(--color-primary);
+    text-decoration: none;
 }
 
 .support-card i {
@@ -1151,6 +1229,11 @@ nav {
     color: var(--color-primary);
     margin-bottom: 20px;
     display: block;
+    transition: color 0.3s;
+}
+
+.support-card:hover i {
+    color: var(--color-primary-hover);
 }
 
 .support-card h3 {
@@ -1159,9 +1242,61 @@ nav {
     color: var(--color-text);
     margin: 0;
     letter-spacing: 0.5px;
+    transition: color 0.3s;
 }
 
-/* Responsive */
+.support-card:hover h3 {
+    color: var(--color-primary);
+}
+
+/* Hidden Cards */
+.hidden-support-card {
+    display: none;
+}
+
+/* Animation for appearing cards */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.support-card:not(.hidden-support-card),
+.hidden-support-card[style*="display: block"] {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Button Styles */
+#showMoreSupport {
+    padding: 15px 40px;
+    background: var(--color-accent);
+    color: var(--color-primary-dark);
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#showMoreSupport:hover {
+    background: #ffc94d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================================
+   RESPONSIVE STYLES
+   ======================================== */
+
+/* Tablet (max-width: 968px) */
 @media (max-width: 968px) {
     .support-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1172,6 +1307,7 @@ nav {
     }
 }
 
+/* Mobile (max-width: 640px) */
 @media (max-width: 640px) {
     .support-header {
         flex-direction: column;
@@ -1190,9 +1326,23 @@ nav {
     .support-header h2 {
         font-size: 24px;
     }
+    
+    .support-card {
+        padding: 30px 20px;
+    }
+    
+    .support-card i {
+        font-size: 40px;
+    }
+    
+    .support-card h3 {
+        font-size: 14px;
+    }
 }
-
 /* Get Involved Section */
+/* ========================================
+   GET INVOLVED SECTION
+   ======================================== */
 .get-involved {
     padding: 80px 0;
     background: var(--color-white);
@@ -1237,7 +1387,7 @@ nav {
 .involved-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: transform 0.4s ease;
 }
 
@@ -1245,6 +1395,7 @@ nav {
     transform: scale(1.05);
 }
 
+/* Content Area */
 .involved-content {
     padding: 40px;
     text-align: left;
@@ -1252,8 +1403,10 @@ nav {
     align-items: center;
     justify-content: flex-start;
     flex: 1;
+    min-height: 110px; /* Фиксированная высота для выравнивания кнопок */
 }
 
+/* Button with Text Wrapping Support */
 .involved-btn {
     display: inline-block;
     padding: 14px 40px;
@@ -1268,15 +1421,65 @@ nav {
     text-transform: uppercase;
     background: transparent;
     transition: all 0.3s;
-    white-space: nowrap;
+    white-space: normal; /* Разрешаем перенос текста */
+    word-wrap: break-word; /* Перенос длинных слов */
+    line-height: 1.4; /* Межстрочный интервал для читаемости */
+    text-align: center; /* Центрирование текста внутри кнопки */
+    width: 100%; /* Кнопка на всю ширину контейнера */
+    box-sizing: border-box;
 }
 
 .involved-btn:hover {
     background: var(--color-primary);
     color: var(--color-white);
 }
+/* Hidden Cards */
+.hidden-involved-card {
+    display: none;
+}
 
-/* Responsive */
+/* Animation for appearing cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hidden-involved-card[style*="display: block"] {
+    animation: fadeInUp 0.5s ease-in-out;
+}
+
+/* Button Styles */
+#showMoreInvolved {
+    padding: 15px 40px;
+    background: var(--color-accent);
+    color: var(--color-primary-dark);
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#showMoreInvolved:hover {
+    background: #ffc94d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================================
+   RESPONSIVE STYLES
+   ======================================== */
+
+/* Tablet (max-width: 968px) */
 @media (max-width: 968px) {
     .involved-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1285,8 +1488,18 @@ nav {
     .get-involved h2 {
         font-size: 32px;
     }
+    
+    .involved-btn {
+        font-size: 14px;
+        padding: 12px 20px;
+    }
+    
+    .involved-content {
+        min-height: 130px; /* Увеличиваем высоту для 2 колонок, чтобы вместить перенос */
+    }
 }
 
+/* Mobile (max-width: 640px) */
 @media (max-width: 640px) {
     .involved-grid {
         grid-template-columns: 1fr;
@@ -1299,9 +1512,24 @@ nav {
     .involved-image {
         height: 200px;
     }
+    
+    .involved-btn {
+        font-size: 13px;
+        padding: 10px 15px;
+        line-height: 1.3;
+    }
+    
+    .involved-content {
+        padding: 30px 20px;
+        min-height: auto; /* На мобильном высота авто */
+    }
 }
 
 /* Footer */
+/* Footer */
+/* ========================================
+   FOOTER SECTION
+   ======================================== */
 footer {
     background: var(--color-primary-dark);
     color: var(--color-white);
@@ -1310,13 +1538,13 @@ footer {
 
 .footer-main {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 60px;
-    margin-bottom: 40px;
+    grid-template-columns: 1.5fr 2fr 1.5fr;
+    gap: 40px;
+    align-items: start;
 }
 
 .footer-brand {
-    max-width: 320px;
+    max-width: 280px;
 }
 
 .footer-logo img {
@@ -1325,61 +1553,89 @@ footer {
     margin-bottom: 20px;
 }
 
-.footer-brand p {
-    font-size: 15px;
-    line-height: 1.6;
-    opacity: 0.9;
-    margin: 0;
-}
-
+/* Links Grid - 2 rows x 3 cols */
 .footer-links {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    grid-template-rows: auto auto;
+    gap: 15px 30px;
 }
 
 .footer-col h3 {
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
     color: var(--color-white);
 }
 
-.footer-col ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-col li {
-    margin-bottom: 12px;
-}
-
-.footer-col a {
+/* Ссылки меню в футере */
+.footer-col h3 a {
     color: var(--color-white);
     text-decoration: none;
-    opacity: 0.9;
-    transition: opacity 0.3s;
-    font-size: 15px;
+    transition: color 0.3s;
+    display: inline-block;
+    padding: 5px 0;
 }
 
-.footer-col a:hover {
-    opacity: 1;
-    text-decoration: underline;
+.footer-col h3 a:hover {
+    color: var(--color-accent);
+    text-decoration: none;
 }
 
-.footer-col li:not(:has(a)) {
-    opacity: 0.9;
-    font-size: 15px;
+/* Contacts Column */
+.footer-contacts-col {
+    grid-column: 3 / 4;
+}
+
+.footer-contacts-col h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-white);
+}
+
+.footer-contact-item {
+    margin-bottom: 20px;
+}
+
+.footer-contact-item strong {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-white);
+}
+
+.footer-contact-item p {
+    margin: 0;
+    font-size: 14px;
     line-height: 1.5;
+    color: var(--color-white);
+    opacity: 0.9;
 }
 
+/* Ссылки в контактах */
+.footer-contact-item a {
+    color: var(--color-white);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-contact-item a:hover {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+/* Divider */
 .footer-divider {
     height: 1px;
     background: rgba(255, 255, 255, 0.2);
-    margin: 30px 0;
+    margin: 40px 0 30px;
 }
 
+/* Footer Bottom */
 .footer-bottom {
     display: flex;
     justify-content: space-between;
@@ -1394,45 +1650,67 @@ footer {
     flex-wrap: wrap;
 }
 
+/* Нижние ссылки */
 .footer-bottom-links a {
     color: var(--color-white);
     text-decoration: none;
-    font-size: 15px;
-    opacity: 0.9;
-    transition: opacity 0.3s;
+    font-size: 14px;
+    transition: color 0.3s;
 }
 
 .footer-bottom-links a:hover {
-    opacity: 1;
-    text-decoration: underline;
+    color: var(--color-accent);
+    text-decoration: none;
 }
 
 .footer-bottom p {
     margin: 0;
-    font-size: 15px;
+    font-size: 14px;
+    color: var(--color-white);
     opacity: 0.9;
 }
 
-/* Responsive */
+/* ========================================
+   RESPONSIVE STYLES
+   ======================================== */
+
+/* Tablet (max-width: 968px) */
 @media (max-width: 968px) {
     .footer-main {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 30px;
     }
     
     .footer-brand {
         max-width: 100%;
+        text-align: center;
+    }
+    
+    .footer-logo {
+        display: flex;
+        justify-content: center;
     }
     
     .footer-links {
         grid-template-columns: repeat(2, 1fr);
+        gap: 12px 20px;
+    }
+    
+    .footer-contacts-col {
+        grid-column: 1 / -1;
+        margin-top: 20px;
     }
 }
 
+/* Mobile (max-width: 640px) */
 @media (max-width: 640px) {
     .footer-links {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 10px;
+    }
+    
+    .footer-contacts-col {
+        grid-column: 1 / -1;
     }
     
     .footer-bottom {
